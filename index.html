@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>需要密码的网站</title>
+  <script>
+    // 定义密码
+    var password = "123456789";
+
+    // 检查密码是否正确
+    function checkPassword() {
+      var inputPassword = document.getElementById("password").value;
+      if (inputPassword === password) {
+        // 密码正确，重定向到网站主页
+        window.location.href = "index.html";
+      } else {
+        // 密码错误，显示错误消息
+        alert("密码错误，请重新输入！");
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>需要密码的网站</h1>
+  <form>
+    <label for="password">请输入密码：</label>
+    <input type="password" id="password" name="password">
+    <button type="button" onclick="checkPassword()">进入</button>
+  </form>
+</body>
+</html>
